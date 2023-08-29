@@ -1,0 +1,22 @@
+Endpoints:
+
+1) /movie-game/two-movies-for-comparison
+This is to get two movies for their comparison. Required values are sent as request params.
+My goal was not to expose possibly sensitive data as popularity, run time, revenue and vote average.
+These four categories are evaluated by game player and I did not want to show the player such data. So a player cannot
+cheat, using a browser inspect panel.
+
+2) /movie-game/guess
+This is meant to evaluate player's guess. Required values are sent as request params.
+
+3) /movie-game/movie/get/{id}
+This is created so a user can check if vote count logic works correctly.
+Required value for event id is sent as a path variable.
+
+
+Application properties:
+
+
+Added two lines to allow running the project. These lines are shown bellow:
+spring.jpa.hibernate.ddl-auto=none
+spring.sql.init.mode=always
